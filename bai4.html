@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+        fieldset {
+          border: 1px solid #ccc;
+          margin-bottom: 20px;
+          padding: 15px;
+        }
+        legend {
+          font-weight: bold;
+        }
+        label {
+          display: inline-block;
+          width: 150px;
+          margin-top: 10px;
+          vertical-align: top;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+          width: 250px;
+        }
+        textarea {
+          height: 100px;
+        }
+        .checkbox-group, .radio-group {
+          display: inline-block;
+          margin-top: 10px;
+        }
+        .form-actions {
+          margin-top: 20px;
+        }
+      </style>
+</head>
+<body>
+    
+<form>
+    <fieldset>
+      <legend>Basic Info</legend>
+      <label>Employee ID</label><input type="text" value="9"><br>
+      <label>Last Name</label><input type="text" value="Dodsworth"><br>
+      <label>First Name</label><input type="text" value="Anne"><br>
+      <label>Gender</label>
+      <div class="radio-group">
+        <input type="radio" name="Gender"> Male
+        <input type="radio" name="Gender"> Female
+        <input type="radio" name="Gender" checked> ZZZ
+      </div><br>
+      <label>Title</label><input type="text" value="Sales Representative"><br>
+      <label>Suffix</label><input type="text" value="Ms."><br>
+      <label>BirthDate</label><input type="text" value="1969-07-02 00:00:00"><br>
+      <label>HireDate</label><input type="text" value="1994-11-15 00:00:00"><br>
+      <label>SSN (if applicable)</label><input type="text"><br>
+      <label>Reports To</label>
+      <select>
+        <option>Buchanan</option>
+      </select>
+    </fieldset>
+  
+    <fieldset>
+      <legend>Contact Info</legend>
+      <label>Email</label><input type="email" placeholder="name@example.com"><br>
+      <label>Address</label><input type="text" value="7 Houndstooth Rd."><br>
+      <label>City</label><input type="text" value="London"><br>
+      <label>Region</label><input type="text"><br>
+      <label>Postal Code</label><input type="text" value="WG2 7LT"><br>
+      <label>Country</label>
+      <select>
+        <option>Russian Federation</option>
+      </select><br>
+      <label>US Home Phone</label><input type="text" value="(234)234-2342"><br>
+      <label>Photo</label><input type="text" value="EmpID9.bmp"><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend>Optional Info</legend>
+      <label>Notes</label>
+      <textarea>Anne has a BA degree in English from St. Lawrence College.
+  She is fluent in French and German.ZZZ</textarea><br>
+  
+      <label>Preferred Shift</label>
+      <div class="checkbox-group">
+        <input type="checkbox"> Regular
+        <input type="checkbox" checked> Gravy Yard
+      </div><br>
+      <label>Active?</label>
+      <input type="checkbox" checked><br>
+      <label>Are you human?</label><br>
+      <div style="margin-left: 150px; font-weight: bold;">TIDAWO</div>
+      <div style="margin-left: 150px;">Click to change</div>
+      <input type="text" style="margin-left: 150px;">
+    </fieldset>
+  
+    <div class="form-actions">
+      <button type="submit">Submit</button>
+      <button type="button">Cancel</button>
+    </div>
+  </form>
+</body>
+</html>

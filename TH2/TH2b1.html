@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form Flexbox</title>
+  <style>
+    /* Reset cơ bản */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    /* Khung bao quanh form */
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 30px;
+    }
+
+    /* Tiêu đề form */
+    .contact-container h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Mỗi dòng input sử dụng flex */
+    .form-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    /* Dòng đầu hai ô bằng nhau */
+    .form-row.half > input {
+      flex: 1;
+    }
+    /* Các input, textarea chung */
+    input,
+    textarea {
+      border: 1px solid #ddd;
+      padding: 10px;
+      font-size: 14px;
+      width: 100%;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    /* Hàng nút và help-text */
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .form-actions button {
+      background-color: #5bc0de;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .form-actions button:hover {
+      background-color: #31b0d5;
+    }
+    .help-text {
+      font-size: 12px;
+      color: #666;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <h2>Get in touch with us by filling contact form below</h2>
+    <form>
+      <!-- Dòng 1: tên và email -->
+      <div class="form-row half">
+        <input type="text" placeholder="* Enter your full name" required>
+        <input type="email" placeholder="* Enter your email address" required>
+      </div>
+      <!-- Dòng 2: subject -->
+      <div class="form-row">
+        <input type="text" placeholder="Enter your subject">
+      </div>
+      <!-- Dòng 3: message -->
+      <div class="form-row">
+        <textarea placeholder="* Your message here..." required></textarea>
+      </div>
+      <!-- Nút gửi và help-text -->
+      <div class="form-actions">
+        <button type="submit">Send message</button>
+        <span class="help-text">* Please fill all required form field, thanks!</span>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
